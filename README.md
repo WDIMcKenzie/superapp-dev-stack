@@ -100,4 +100,4 @@ MIT — see [LICENSE](LICENSE).
 - Curriculum and tooling patterns by the SuperApp Dev Stack maintainers (MIT).
 - Team coordination pattern adapted from
   [myPKA / ICOR](https://github.com/TomSolid/myPKA) (Paperless Movement).
-- [Well Do It Solutions](https://welldoit.solutions) — Backend For Frontend Success.
+- [We'll Do It Solutions](https://welldoit.solutions) — Backend For Frontend Success.
