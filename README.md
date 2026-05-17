@@ -4,6 +4,8 @@ A **public curriculum and starter kit** for building modern full-stack applicati
 with AI agents — host-agnostic, database-agnostic, and optimized for Cursor, Claude,
 Codex, ChatGPT, and Gemini.
 
+## I created this to help others like me who may understand development but can not code and with the advant of AI want to start building now that we are not limited to our own skills and knowledge of coding. This is a vanilla version and a starting point for you utilize your ai tools to customize this for you. 
+
 ## What you get
 
 - **Multi-agent orchestration** — Orchestrator + specialist team (`team/`)
