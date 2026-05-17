@@ -23,12 +23,17 @@ Use consistently:
 ./scripts/leak-scan.sh
 ```
 
+Generic checks run from the repo. For **your** org hostnames and product codenames,
+copy `scripts/leak-scan.patterns.example` to `scripts/leak-scan.patterns`
+(gitignored) — never commit real internal names to this public repository.
+
 ## Manual review
 
 - [ ] README and playbooks contain no real URLs except `example.com` style
 - [ ] Screenshots redacted or synthetic
 - [ ] Git history does not contain secrets (use `git log -p` spot check)
-- [ ] Agent prompts do not reference proprietary product names
+- [ ] Agent prompts do not reference proprietary product or internal program names
+- [ ] No links to private commercial products unless you intend public marketing
 
 ## Agent sessions
 

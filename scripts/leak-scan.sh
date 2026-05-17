@@ -18,23 +18,26 @@ scan() {
 
 echo "Running leak scan in $ROOT ..."
 
-# Org-specific blocklist (local patterns file)
-scan "Org-specific hostnames" \
-  '{{GCP_PROJECT}}|monocle\.welldoit|{{HOST_STAGING}}|{{ORG}}-unified-stack|{{ORG}}/{{REPO}}'
-
-scan "Internal blueprint paths" \
-  'docs/plans/YYYY-MM-DD|Blueprint REF-[0-9]+'
-
-# Secrets patterns
+# Generic secret and credential patterns (safe for any public repo)
 scan "Likely API keys" \
   'sk-[a-zA-Z0-9]{20,}|AKIA[0-9A-Z]{16}'
 
-scan "Private email in content" \
-  '{{PRIVATE_EMAIL_PATTERN}}'
-
-# Real-looking connection strings (allow example placeholders)
 scan "Committed DATABASE_URL with credentials" \
   'postgresql://[^:]+:[^@]+@|mongodb\+srv://[^:]+:[^@]+@'
+
+# Optional org-specific patterns (not committed — copy from example)
+PATTERNS_FILE="$ROOT/scripts/leak-scan.patterns"
+if [[ -f "$PATTERNS_FILE" ]]; then
+  echo "Loading custom patterns from scripts/leak-scan.patterns"
+  while IFS= read -r line || [[ -n "$line" ]]; do
+    line="${line%%#*}"
+    line="$(echo "$line" | xargs)"
+    [[ -z "$line" ]] && continue
+    scan "Custom pattern" "$line"
+  done < "$PATTERNS_FILE"
+else
+  echo "Tip: copy scripts/leak-scan.patterns.example → scripts/leak-scan.patterns for org-specific checks (gitignored)."
+fi
 
 if [[ "$FAIL" -eq 0 ]]; then
   echo "OK: leak scan passed."

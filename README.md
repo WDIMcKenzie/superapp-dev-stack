@@ -4,7 +4,15 @@ A **public curriculum and starter kit** for building modern full-stack applicati
 with AI agents — host-agnostic, database-agnostic, and optimized for Cursor, Claude,
 Codex, ChatGPT, and Gemini.
 
-## I created this to help others like me who may understand development but can not code and with the advant of AI want to start building now that we are not limited to our own skills and knowledge of coding. This is a vanilla version and a starting point for you utilize your ai tools to customize this for you. 
+## About
+
+This repository is an **open, generic** distillation of team practices for
+AI-assisted full-stack development. It is maintained by
+[WDIMcKenzie](https://github.com/WDIMcKenzie) for the coding community.
+
+**What is not included:** private product code, proprietary security runbooks,
+internal host or cloud naming, customer data, or any commercial product-specific
+configuration. Use the template and playbooks with your own `{{ORG}}` placeholders.
 
 ## What you get
 
@@ -89,7 +97,7 @@ MIT — see [LICENSE](LICENSE).
 
 ## Credits
 
-Team coordination pattern adapted from
-[myPKA / ICOR](https://github.com/TomSolid/myPKA) (Paperless Movement).
-&
-https://welldoit.solutions (Backend For Frontend Success)
+- Curriculum and tooling patterns by the SuperApp Dev Stack maintainers (MIT).
+- Team coordination pattern adapted from
+  [myPKA / ICOR](https://github.com/TomSolid/myPKA) (Paperless Movement).
+- [Well Do It Solutions](https://welldoit.solutions) — Backend For Frontend Success.

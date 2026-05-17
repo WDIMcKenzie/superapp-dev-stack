@@ -9,7 +9,7 @@ projects you generate from `template/` or `samples/`.
 
 Do **not** open a public issue for sensitive reports.
 
-1. Email your maintainer contact listed in `README.md` (replace before publish).
+1. Open a private security advisory on GitHub (**Security** → **Advisories** → **Report a vulnerability**), or contact the maintainers through the repository’s GitHub profile — do not post secrets in issues.
 2. Include steps to reproduce and impact assessment.
 3. Allow reasonable time for a fix before disclosure.
 

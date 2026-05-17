@@ -5,7 +5,7 @@ Optimized for **managed WordPress** + **split stack** modern apps.
 ## When to choose
 
 - Marketing / WooCommerce site on managed WordPress
-- Staging subdomain on GoDaddy (`*.{{HOST_STAGING}}.com` pattern or custom staging)
+- Staging subdomain on GoDaddy (host-provided staging URL or custom subdomain)
 
 ## What runs where
 

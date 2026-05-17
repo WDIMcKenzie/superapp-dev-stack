@@ -4,7 +4,8 @@ Thank you for improving SuperApp Dev Stack.
 
 ## Before you open a PR
 
-1. Run `scripts/leak-scan.sh` — must pass with no proprietary strings.
+1. Run `scripts/leak-scan.sh` — must pass. Use a local `scripts/leak-scan.patterns`
+   file (from `.example`) for org-specific checks; do not commit internal names here.
 2. Use placeholders: `{{ORG}}`, `{{PROJECT}}`, `{{STAGING_URL}}`, etc.
 3. Follow conventional commits: `type(scope): description`.
 4. Keep docs actionable: numbered steps with location tags where relevant.

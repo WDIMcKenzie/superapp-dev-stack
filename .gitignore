@@ -48,5 +48,8 @@ projects/*
 !projects/README.md
 !projects/.gitkeep
 
+# Local org-specific leak-scan patterns (never commit real hostnames here)
+scripts/leak-scan.patterns
+
 # OS
 Thumbs.db
