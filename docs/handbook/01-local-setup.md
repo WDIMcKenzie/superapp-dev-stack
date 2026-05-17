@@ -25,9 +25,20 @@ pnpm -v
 
 ## Project bootstrap
 
+**Recommended:** run the wizard from the curriculum repo root:
+
 ```bash
-cp -r template/ ~/projects/{{APP}}
-cd ~/projects/{{APP}}
+pnpm run init
+```
+
+That creates `projects/<app-slug>/` with the standard monorepo layout.
+
+**Manual** (same layout):
+
+```bash
+mkdir -p projects/{{APP}}
+cp -r template/* projects/{{APP}}/
+cd projects/{{APP}}
 pnpm install
 cp .env.example .env.local
 pnpm run db:up

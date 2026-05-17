@@ -1,10 +1,14 @@
 # SuperApp template monorepo
 
-Copy this folder to start a new project.
+Copy this folder to start a new project (or run `pnpm run init` from the curriculum repo).
 
 ```bash
-cp -r template/ ~/projects/{{APP}}
-cd ~/projects/{{APP}}
+# Recommended — from curriculum repo root
+pnpm run init
+
+# Manual — same layout as init creates
+mkdir -p projects/{{APP}} && cp -r template/* projects/{{APP}}/
+cd projects/{{APP}}
 pnpm install
 cp .env.example .env.local
 pnpm run db:up

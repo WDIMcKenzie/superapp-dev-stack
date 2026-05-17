@@ -14,7 +14,14 @@
     "db:up": "bash scripts/db/up.sh",
     "db:validate": "bash scripts/db/validate.sh",
     "db:switch": "bash scripts/db/switch-provider.sh",
-    "push": "git push"
+    "push": "git push",
+    "ops:check": "bash scripts/ops/stack-check.sh",
+    "ops:run": "bash scripts/ops/stack-run.sh",
+    "ops:pull": "bash scripts/ops/git-pull.sh",
+    "ops:push": "bash scripts/ops/git-push.sh",
+    "ops:hosting": "bash scripts/ops/hosting-setup.sh",
+    "ops:deploy:staging": "bash scripts/ops/deploy-staging.sh",
+    "ops:deploy:prod": "bash scripts/ops/deploy-prod.sh"
   },
   "devDependencies": {
     "dotenv": "^16.4.0",

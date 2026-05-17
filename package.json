@@ -1,0 +1,16 @@
+{
+  "name": "superapp-dev-stack",
+  "private": true,
+  "description": "Public curriculum and setup wizard for AI-assisted full-stack development",
+  "scripts": {
+    "init": "node scripts/init/index.mjs",
+    "doctor": "node scripts/init/doctor.mjs",
+    "new-app": "node scripts/ops/new-app.mjs",
+    "stack:check": "bash scripts/ops/stack-check.sh",
+    "stack:run": "bash scripts/ops/stack-run.sh",
+    "leak-scan": "bash scripts/leak-scan.sh"
+  },
+  "engines": {
+    "node": ">=20.11.1"
+  }
+}

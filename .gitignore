@@ -43,5 +43,10 @@ packages/data/prisma/*.db-journal
 # Supabase local
 .supabase/
 
+# User apps created by init wizard (keep projects/README.md)
+projects/*
+!projects/README.md
+!projects/.gitkeep
+
 # OS
 Thumbs.db

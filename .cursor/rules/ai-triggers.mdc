@@ -1,0 +1,29 @@
+---
+description: SuperApp AI trigger phrases map to scripts/ops — never auto-deploy staging/prod
+globs:
+alwaysApply: true
+---
+
+# AI triggers (SuperApp curriculum)
+
+When the user uses a **trigger phrase**, run the matching script from `scripts/ops/` or `prompts/triggers/` — do not improvise deploy commands.
+
+| Phrase | Script |
+|--------|--------|
+| create new app | `node scripts/ops/new-app.mjs` |
+| bootstrap github | `bash scripts/ops/github-bootstrap.sh --confirm` |
+| check the stack | `bash scripts/ops/stack-check.sh` |
+| run the stack | `bash scripts/ops/stack-run.sh` |
+| pull latest | `bash scripts/ops/git-pull.sh` |
+| push to github | `bash scripts/ops/git-push.sh` |
+| setup hosting | `bash scripts/ops/hosting-setup.sh --host <id>` |
+| deploy staging | `deploy-staging.sh --confirm` only if user explicitly asked |
+| deploy production | `deploy-prod.sh --confirm` only if user explicitly asked |
+
+Rules:
+- GitHub push is not a live deploy.
+- Never pass `--confirm` for staging/prod unless the user clearly requested that environment.
+- Use `projects/<slug>/` paths, not machine-specific home directories.
+- Run `scripts/leak-scan.sh` before public GitHub push.
+
+Index: `prompts/triggers/INDEX.md`
