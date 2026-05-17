@@ -16,16 +16,29 @@ configuration. Use the template and playbooks with your own `{{ORG}}` placeholde
 
 ## How to work with AI
 
-You only need **one primary coding tool** for implementation. Focus your time on
-**orchestration and architecture** — plans, contracts, reviews, and product decisions.
+You only need **one primary coding tool** in the repo — **[Cursor](https://cursor.com/referral?code=DMALHVRLXZPR)** as
+the **Engineer**. You focus on **orchestration and architecture**; the specialist
+team in [`team/`](team/) maps to the tools below.
 
-| Role | Suggested tool | Notes |
-|------|----------------|-------|
-| **Engineer** (writes code in the repo) | [Cursor](https://cursor.com/referral?code=DMALHVRLXZPR) | Our recommended IDE and coding agent |
-| **Architect / Orchestrator** (plans, routes work) | Claude, ChatGPT, Gemini, or Codex | Paste [`team/ADAPTER-PROMPT.md`](team/ADAPTER-PROMPT.md) |
+| SuperApp role | Tool | Use for |
+|---------------|------|---------|
+| Orchestrator, Architect, Assistant, Document designer | **Claude** | Plans, blueprints, HANDOFF, specs, long docs |
+| Engineer | **Cursor** | Implementation, tests, git |
+| Assistant 2 | **ChatGPT** | Short coding checks, bugs, quick review |
+| Researcher | **Gemini** / **NotebookLM** | Web search, research digests |
+| Creative | **Claude, ChatGPT, or Gemini** | Graphics, UI, copy — any of the three |
+| Quality | **ChatGPT** + Cursor | Pre-merge acceptance |
 
-You do not need every AI product at once. One strong coding surface plus clear
-blueprints from the Orchestrator is enough to start.
+**Stages:** Intake (Claude) → Research (Gemini/NotebookLM) → Blueprint (Claude) →
+Implement (Cursor) → Quick check (ChatGPT) → Design (optional) → Quality → Ship.
+
+Full setup steps, how to add each tool, and the daily loop:
+[`docs/agents/multi-tool-orchestrator-setup.md`](docs/agents/multi-tool-orchestrator-setup.md).
+
+Start Orchestrator day one: paste [`team/ADAPTER-PROMPT.md`](team/ADAPTER-PROMPT.md) into Claude.
+
+**Coming soon:** a We'll Do It track on **building your own models** (training,
+fine-tuning, evaluation) — follow [welldoit.solutions](https://welldoit.solutions) for updates.
 
 ## Suggested cloud architecture
 
@@ -137,8 +150,9 @@ MIT — see [LICENSE](LICENSE).
 
 - **[Cursor](https://cursor.com/referral?code=DMALHVRLXZPR)** (Anysphere) — recommended IDE
   and implementation agent; you orchestrate and architect, Cursor helps execute in the repo.
-- **Orchestrator models** documented in this repo: Anthropic Claude, OpenAI ChatGPT/Codex,
-  Google Gemini — see [`docs/agents/`](docs/agents/) and [`team/`](team/).
+- **Orchestrator stack** — Anthropic Claude (Orchestrator/Architect), OpenAI ChatGPT
+  (Assistant 2 / quick checks), Google Gemini and NotebookLM (research), Cursor
+  (Engineer) — see [`docs/agents/multi-tool-orchestrator-setup.md`](docs/agents/multi-tool-orchestrator-setup.md).
 
 ### Open-source projects (template and curriculum)
 

@@ -1,6 +1,8 @@
 # Orchestrator and specialists
 
-See `team/README.md` and `team/agent-index.md`.
+See `team/README.md`, `team/agent-index.md`, and
+[multi-tool-orchestrator-setup.md](multi-tool-orchestrator-setup.md) (Claude, ChatGPT,
+Gemini/NotebookLM, Cursor — stages and first-time setup).
 
 ## 4-doc pickup
 

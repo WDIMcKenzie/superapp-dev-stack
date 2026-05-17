@@ -8,7 +8,9 @@ Three tracks. Finish each exit criterion before moving on.
 2. **[local-tree]** Clone or copy this repo; read [README.md](../README.md).
 3. **[github]** Create account, enable 2FA, create `{{ORG}}/{{APP}}` repo.
 4. **[local-repo]** Configure git user.name and user.email.
-5. Initialize agents: paste [team/ADAPTER-PROMPT.md](../team/ADAPTER-PROMPT.md).
+5. Initialize agents: paste [team/ADAPTER-PROMPT.md](../team/ADAPTER-PROMPT.md) into **Claude**
+   (Orchestrator). Add ChatGPT, Gemini/NotebookLM, and [Cursor](https://cursor.com/referral?code=DMALHVRLXZPR)
+   per [multi-tool orchestrator setup](agents/multi-tool-orchestrator-setup.md).
 
 **Exit:** `git status` works; Orchestrator reports ready.
 

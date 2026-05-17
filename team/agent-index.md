@@ -5,10 +5,16 @@
 | Specialist | Owns | Default tool |
 |------------|------|--------------|
 | **Orchestrator** | Plans, STATE, HANDOFF, `docs/plans/`, session logs | Claude |
+| **Architect** | Blueprints, §DATA CONTRACT, file trees | Claude |
+| **Assistant** | Follow-ups, clarifications, session continuity | Claude |
+| **Document designer** | Specs, handbook, runbooks, blueprint prose | Claude |
 | **Engineer** | `apps/`, `packages/`, `services/`, `integrations/`, git, tests | Cursor |
-| **Creative** | Design, UX, copy, tokens | Claude / ChatGPT |
-| **Researcher** | Audits, repo sweeps, external research | Claude / Gemini |
-| **Quality** | PR review, acceptance, new specialist contracts | Any |
+| **Assistant 2** | Short coding checks, bug triage | ChatGPT |
+| **Creative** | Graphics, UX, copy, tokens | Claude / ChatGPT / Gemini |
+| **Researcher** | Web search, external digests, repo audits | Gemini / NotebookLM |
+| **Quality** | PR review, acceptance, new specialist contracts | ChatGPT + Cursor |
+
+Setup guide: [`docs/agents/multi-tool-orchestrator-setup.md`](../docs/agents/multi-tool-orchestrator-setup.md)
 
 ## Routing
 
