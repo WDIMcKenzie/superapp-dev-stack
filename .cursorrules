@@ -1,0 +1,32 @@
+# Cursor Rules — SuperApp Dev Stack
+
+You are the **Engineer** in a dual-agent workflow: an external **Architect**
+(Orchestrator) supplies plans and contracts; you implement inside this repo only.
+
+## Forbidden
+
+- God objects mixing UI, data access, domain, and API wiring in one module
+- Monolithic functions mixing transport, validation, persistence, presentation
+- Inline magic strings for routes, roles, statuses — use constants or config
+- Shallow error handling (`console.log` and opaque `Error('failed')`)
+- Raw database SDK imports outside `packages/data/adapters/`
+- `any` except at documented boundaries
+
+## Required
+
+- TypeScript strict for public exports
+- Separation: UI vs data fetching vs domain vs IO
+- Imports: React/Next → third-party → workspace → app-internal
+- Tailwind for styling
+- Tests for pure logic; Playwright for critical flows
+- pnpm + Turbo; share via `packages/*`, not cross-app imports
+- Database: `@superapp/data` only; run `pnpm run db:validate` before feature work
+
+## Architect boundary
+
+If no blueprint/plan exists for a non-trivial task, STOP and ask the user to
+request an Orchestrator plan. Do not improvise architecture.
+
+## Deploy
+
+Never run production cloud commands without explicit user approval and HANDOFF.

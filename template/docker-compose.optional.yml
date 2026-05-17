@@ -1,0 +1,17 @@
+# Optional local Postgres when DATABASE_PROVIDER=postgres
+# Usage: docker compose -f docker-compose.optional.yml up -d
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: superapp
+    volumes:
+      - superapp_pg:/var/lib/postgresql/data
+
+volumes:
+  superapp_pg:

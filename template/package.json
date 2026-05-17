@@ -1,0 +1,25 @@
+{
+  "name": "@superapp/template",
+  "private": true,
+  "packageManager": "pnpm@9.15.4",
+  "engines": {
+    "node": ">=20.11.1",
+    "pnpm": ">=9"
+  },
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "db:up": "bash scripts/db/up.sh",
+    "db:validate": "bash scripts/db/validate.sh",
+    "db:switch": "bash scripts/db/switch-provider.sh",
+    "push": "git push"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.0",
+    "tsx": "^4.19.0",
+    "turbo": "^2.3.0",
+    "typescript": "^5.7.0"
+  }
+}

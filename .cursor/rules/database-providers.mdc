@@ -1,0 +1,13 @@
+---
+description: Database provider contract and adapter-only access
+alwaysApply: true
+---
+
+# Database providers
+
+- Read `docs/databases/00-data-contract.md` before schema or connection changes.
+- Set `DATABASE_PROVIDER` and `DATABASE_URL` in `.env.local` only — never commit.
+- Apps import `@superapp/data`; adapters live in `packages/data/src/adapters/`.
+- Run `pnpm run db:validate` before feature implementation.
+- Do not add a second ORM or `mongoose.connect` in route handlers.
+- Health: `GET /api/health/db` must not return secrets.

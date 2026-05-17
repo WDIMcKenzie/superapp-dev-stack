@@ -1,0 +1,12 @@
+---
+description: API and webhook integration patterns
+alwaysApply: true
+---
+
+# API integration
+
+- Idempotent webhook handlers with signature verification when supported.
+- Retry with exponential backoff for transient failures.
+- Typed request/response interfaces; validate at boundaries.
+- Log failures with context; never expose internal errors to clients.
+- Rate-limit public endpoints where appropriate.

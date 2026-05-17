@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build
+dist/
+.next/
+.turbo/
+out/
+build/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+wallet/
+secrets/
+
+# IDE
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Test
+coverage/
+playwright-report/
+test-results/
+
+# Prisma
+packages/data/prisma/*.db
+packages/data/prisma/*.db-journal
+
+# Supabase local
+.supabase/
+
+# OS
+Thumbs.db

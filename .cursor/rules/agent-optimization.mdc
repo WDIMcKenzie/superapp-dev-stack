@@ -1,0 +1,13 @@
+---
+description: Optimizing AI agents for this stack
+alwaysApply: true
+---
+
+# Agent optimization
+
+- Session start: `team/ADAPTER-PROMPT.md` + 4-doc pickup (STATE, HANDOFF, role AGENTS, latest session).
+- Use Plan mode for architecture; Agent mode for implementation.
+- Parallel blueprints → separate git worktrees/branches.
+- Keep context small: read blueprint sections by ID, not entire trees.
+- Prefer `db:validate` and health endpoints over guessing connection strings.
+- Enable provider MCP (Supabase, MongoDB) when documented in `docs/databases/ai-agent-database-setup.md`.

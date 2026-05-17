@@ -1,0 +1,12 @@
+---
+description: Core engineering standards for SuperApp projects
+alwaysApply: true
+---
+
+# Engineering standards
+
+- Split files by responsibility when they grow large.
+- Use Zod or similar at env and API boundaries.
+- Server Components default in Next.js App Router.
+- Structured errors: user-safe messages, logged causes server-side.
+- Conventional commits: `type(scope): description`.

@@ -1,0 +1,28 @@
+---
+description: Location tags and role boundaries
+alwaysApply: true
+---
+
+# Vocabulary and location tags
+
+## Roles
+
+- **Architect / Orchestrator** — plans, contracts, routing (Claude, etc.)
+- **Engineer** — implementation (Cursor)
+
+## Location tags (required on multi-step instructions)
+
+| Tag | Meaning |
+|-----|---------|
+| `[local-tree]` | Files on your machine in the repo |
+| `[local-repo]` | Git history and branches (no network) |
+| `[github]` | Remote on github.com |
+| `[-local env]` | Dev runtime on your machine |
+| `[-staging env]` | Staging cloud/host |
+| `[-prod env]` | Production — human gate required |
+
+## Disambiguation
+
+- **merge** — say `[local-repo]` git merge vs `[github]` PR merge
+- **push** — git push vs container image push
+- **staging** — git staged files vs `[-staging env]`

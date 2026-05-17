@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Copy to push-staging.sh and fill {{STAGING_*}} placeholders.
+# NEVER commit credentials.
+
+set -euo pipefail
+
+STAGING_HOST="{{STAGING_SFTP_HOST}}"
+STAGING_USER="{{STAGING_SFTP_USER}}"
+REMOTE_PATH="{{STAGING_REMOTE_PATH}}"
+LOCAL_PATH="sites/wordpress-site"
+
+echo "Pushing $LOCAL_PATH to $STAGING_HOST ..."
+# Example: rsync or lftp — use your host playbook
+# rsync -avz --exclude '.env' "$LOCAL_PATH/" "$STAGING_USER@$STAGING_HOST:$REMOTE_PATH/"
+
+echo "Verify at {{STAGING_URL}}"
