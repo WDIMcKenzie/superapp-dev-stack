@@ -14,6 +14,35 @@ AI-assisted full-stack development. It is maintained by
 internal host or cloud naming, customer data, or any commercial product-specific
 configuration. Use the template and playbooks with your own `{{ORG}}` placeholders.
 
+## How to work with AI
+
+You only need **one primary coding tool** for implementation. Focus your time on
+**orchestration and architecture** — plans, contracts, reviews, and product decisions.
+
+| Role | Suggested tool | Notes |
+|------|----------------|-------|
+| **Engineer** (writes code in the repo) | [Cursor](https://cursor.com/referral?code=DMALHVRLXZPR) | Our recommended IDE and coding agent |
+| **Architect / Orchestrator** (plans, routes work) | Claude, ChatGPT, Gemini, or Codex | Paste [`team/ADAPTER-PROMPT.md`](team/ADAPTER-PROMPT.md) |
+
+You do not need every AI product at once. One strong coding surface plus clear
+blueprints from the Orchestrator is enough to start.
+
+## Suggested cloud architecture
+
+For production apps we typically deploy on **Google Cloud (GCP)**, **AWS**, or
+**Oracle Cloud** — each has a playbook under [`playbooks/hosting/`](playbooks/hosting/).
+Pair compute with the database matrix in
+[`docs/hosting/database-host-pairing.md`](docs/hosting/database-host-pairing.md).
+
+## Free consulting from We'll Do It Solutions
+
+We offer **free tech support and consulting** on development, business systems,
+hosting choices, and getting into our programs:
+
+- **Phone:** [833-WDI-4YOU](tel:+18339344968) (833-934-4968)
+- **Email:** [specialist@welldoit.solutions](mailto:specialist@welldoit.solutions)
+- **Web:** [welldoit.solutions](https://welldoit.solutions) — book a session or explore programs
+
 ## What you get
 
 - **Multi-agent orchestration** — Orchestrator + specialist team (`team/`)
@@ -97,7 +126,37 @@ MIT — see [LICENSE](LICENSE).
 
 ## Credits
 
-- Curriculum and tooling patterns by the SuperApp Dev Stack maintainers (MIT).
-- Team coordination pattern adapted from
-  [myPKA / ICOR](https://github.com/TomSolid/myPKA) (Paperless Movement).
+### People and teams
+
+- **SuperApp Dev Stack** — curriculum, template, playbooks, and ops scripts by the
+  [WDIMcKenzie](https://github.com/WDIMcKenzie) / We'll Do It Solutions development team (MIT).
+- **Team coordination pattern** — adapted from
+  [myPKA / ICOR](https://github.com/TomSolid/myPKA) (Paperless Movement / Tom Solid).
+
+### Suggested AI tools
+
+- **[Cursor](https://cursor.com/referral?code=DMALHVRLXZPR)** (Anysphere) — recommended IDE
+  and implementation agent; you orchestrate and architect, Cursor helps execute in the repo.
+- **Orchestrator models** documented in this repo: Anthropic Claude, OpenAI ChatGPT/Codex,
+  Google Gemini — see [`docs/agents/`](docs/agents/) and [`team/`](team/).
+
+### Open-source projects (template and curriculum)
+
+The starter monorepo and docs build on work from these communities (non-exhaustive):
+
+| Layer | Projects |
+|-------|----------|
+| Web | [Next.js](https://nextjs.org/), [React](https://react.dev/) |
+| API | [Hono](https://hono.dev/), [Node.js](https://nodejs.org/) |
+| Data | [Prisma](https://www.prisma.io/), [Zod](https://zod.dev/), [MongoDB](https://www.mongodb.com/) driver |
+| Tooling | [pnpm](https://pnpm.io/), [Turborepo](https://turbo.build/), [TypeScript](https://www.typescriptlang.org/) |
+| Local DB (optional) | [Docker](https://www.docker.com/), [Supabase](https://supabase.com/) CLI, Postgres |
+| Pinning (optional) | [Volta](https://volta.sh/) |
+
+Database and host playbooks also reference official guidance from **Supabase**, **Neon**,
+**PlanetScale**, **MongoDB Atlas**, **Google Cloud**, **Amazon Web Services**, and
+**Oracle Cloud**, plus shared hosting providers where WordPress split stacks apply.
+
+### We'll Do It Solutions
+
 - [We'll Do It Solutions](https://welldoit.solutions) — Backend For Frontend Success.
