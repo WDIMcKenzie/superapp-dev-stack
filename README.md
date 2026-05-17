@@ -89,4 +89,5 @@ MIT — see [LICENSE](LICENSE).
 
 Team coordination pattern adapted from
 [myPKA / ICOR](https://github.com/TomSolid/myPKA) (Paperless Movement).
+&
 https://welldoit.solutions (Backend For Frontend Success)
