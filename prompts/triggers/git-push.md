@@ -2,9 +2,13 @@
 
 **Say:** `push to github` (NOT deploy)
 
+## Default target
+
+Push **`user/<github-handle>/workspace`** (full full product) unless the user **explicitly** names another branch (e.g. a feature line). See `docs/handbook/06-user-branches-and-deploy-governance.md`.
+
 ## AI instructions
 
-1. Confirm commit message with user.
+1. Confirm branch name and commit message with user.
 2. Run leak scan (script includes it):
 
 ```bash

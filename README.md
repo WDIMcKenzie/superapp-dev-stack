@@ -58,6 +58,7 @@ hosting choices, and getting into our programs:
 
 ## What you get
 
+- **User-branch governance** — `user/<handle>/workspace` default, review before staging, deploy-operator gate ([handbook §06](docs/handbook/06-user-branches-and-deploy-governance.md))
 - **Multi-agent orchestration** — Orchestrator + specialist team (`team/`)
 - **Dual-agent workflow** — Architect (plans) + Engineer (implements)
 - **Starter monorepo** — Next.js + API + swappable databases (`template/`)

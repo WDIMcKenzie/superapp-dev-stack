@@ -6,8 +6,9 @@ Default specialist: **Engineer**.
 
 1. `team/AGENTS.md`
 2. `.cursorrules`
-3. `team/Engineer/AGENTS.md`
-4. `team/STATE.md` + `team/HANDOFF.md`
+3. `.cursor/rules/user-branch-deploy-governance.mdc`
+4. `team/Engineer/AGENTS.md`
+5. `team/STATE.md` + `team/HANDOFF.md`
 
 ## Before coding
 

@@ -18,6 +18,10 @@ Plans, blueprints in `docs/plans/`, routing, session logs.
 
 Implement code in `apps/` or `packages/` — route to Engineer (Cursor).
 
+## Git / deploy policy
+
+`docs/handbook/06-user-branches-and-deploy-governance.md` — user workspace branches; operator-only staging/prod.
+
 ## Data work
 
 Blueprints must include §DATA CONTRACT per `docs/agents/templates/blueprint-template.md`.

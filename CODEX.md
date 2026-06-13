@@ -14,3 +14,5 @@ Default specialist: **Engineer** when running in a repo with git; else **Orchest
 ## Commits
 
 Conventional commits; no secrets in diff.
+
+Default push: `user/<github-handle>/workspace`. Staging/prod: deploy operator only — `docs/handbook/06-user-branches-and-deploy-governance.md`.

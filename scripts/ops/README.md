@@ -2,6 +2,8 @@
 
 Agent- and human-friendly commands. **GitHub push ≠ deploy.**
 
+Governance: default push `user/<handle>/workspace`; staging/prod only for `SUPERAPP_DEPLOY_OPERATOR_EMAIL` — see [docs/handbook/06-user-branches-and-deploy-governance.md](../../docs/handbook/06-user-branches-and-deploy-governance.md).
+
 | Script | Purpose |
 |--------|---------|
 | `new-app.mjs` | Create `projects/<slug>/` locally |

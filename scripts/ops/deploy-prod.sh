@@ -21,6 +21,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 require_confirm "${CONFIRM}" "PRODUCTION deploy requires --confirm"
+guard_deploy_operator
 PROJECT_DIR="$(resolve_project_dir "$PROJECT")"
 
 if [[ -z "$HOST" && -f "$PROJECT_DIR/.superapp/profile.json" ]]; then

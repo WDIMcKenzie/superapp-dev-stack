@@ -23,8 +23,11 @@ Orchestrator routes to Engineer, Creative, Researcher, Quality. See `team/agent-
 
 - No blueprint for non-trivial work
 - Blueprint conflicts with repo
-- `[-prod env]` deploy requested
+- `[-staging env]` or `[-prod env]` deploy requested by a non-operator (push `user/<handle>/workspace` + PR instead)
+- `[-prod env]` deploy without operator and explicit approval
 - `db:validate` fails
+
+Git/deploy policy: [06-user-branches-and-deploy-governance.md](./06-user-branches-and-deploy-governance.md).
 
 ## Blueprint location
 

@@ -26,6 +26,7 @@ EOF
 done
 
 require_confirm "${CONFIRM}" "Staging deploy requires --confirm (explicit approval)"
+guard_deploy_operator
 PROJECT_DIR="$(resolve_project_dir "$PROJECT")"
 
 if [[ -z "$HOST" && -f "$PROJECT_DIR/.superapp/profile.json" ]]; then

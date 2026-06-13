@@ -8,7 +8,9 @@
     "new-app": "node scripts/ops/new-app.mjs",
     "stack:check": "bash scripts/ops/stack-check.sh",
     "stack:run": "bash scripts/ops/stack-run.sh",
-    "leak-scan": "bash scripts/leak-scan.sh"
+    "leak-scan": "bash scripts/leak-scan.sh",
+    "guard:repo": "bash scripts/general-repo-guard.sh",
+    "guard:agent-start": "bash scripts/agent-start-checklist.sh"
   },
   "engines": {
     "node": ">=20.11.1"

@@ -1,0 +1,24 @@
+---
+description: User workspace branches, local-first integration, deploy-operator gate — always applies
+alwaysApply: true
+---
+
+# User branches and deploy governance
+
+Read `docs/handbook/06-user-branches-and-deploy-governance.md`.
+
+## Default workflow
+
+1. **[local-tree]** Work on `user/<github-handle>/workspace` (full product for that person).
+2. **[local-tree]** Test on `[-local env]` — not staging for routine dev.
+3. **[local-repo → github]** Push `user/<handle>/workspace` — not ad-hoc root `feature/*` branches.
+4. **[github]** PR → `develop` → review before shared staging.
+5. **[-staging env] / [-prod env]** Deploy only when the **deploy operator** explicitly orders it (`SUPERAPP_DEPLOY_OPERATOR_EMAIL` / profile `deployOperatorEmail`).
+
+## Partial scope (explicit only)
+
+Default = full full product. Partial push or partial deploy requires the human to say so **before** you act. Confirm branch name and scope in chat.
+
+## Internal teams
+
+Organizations running this stack internally apply the same policy with their own deploy operator (`SUPERAPP_DEPLOY_OPERATOR_EMAIL`). Keep any internal handbook aligned with this public curriculum.

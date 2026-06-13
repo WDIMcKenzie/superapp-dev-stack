@@ -2,6 +2,8 @@
 
 Generic pattern for modern + CMS split stacks.
 
+Branch and deploy governance: [06-user-branches-and-deploy-governance.md](./06-user-branches-and-deploy-governance.md).
+
 ## SaaS application (Next.js + API)
 
 | Activity | Environment |
@@ -25,7 +27,12 @@ Generic pattern for modern + CMS split stacks.
 
 ## Cloud deploy
 
-Deploy scripts are **release train**, not daily loop. Engineer runs only when Orchestrator HANDOFF says so.
+Deploy scripts are **release train**, not daily loop. Only the **deploy operator** (see §06) runs staging/prod after PR merge to `develop` and explicit approval.
+
+- **Default:** two targets (staging + production) in one cloud project until budget allows more staging slots.
+- **Never** auto-deploy from a contributor’s `user/*/workspace` branch without review.
+- Staging: `bash scripts/ops/deploy-staging.sh --confirm` (human gate).
+- Production: stricter gate + staging sign-off first.
 
 ## Database
 

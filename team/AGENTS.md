@@ -16,6 +16,7 @@ Default to **Orchestrator** if unclear. The user talks to the Orchestrator; spec
 
 ## Iron rules
 
+0. **Git/deploy governance** — default branch `user/<github-handle>/workspace`; push to `[github]` for backup; PR to `develop`; staging/prod only for deploy operator ([`docs/handbook/06-user-branches-and-deploy-governance.md`](../docs/handbook/06-user-branches-and-deploy-governance.md)). Partial push/deploy only when the human states scope first.
 1. **Orchestrator routes; specialists execute.**
 2. **STATE.md is truth.** If memory disagrees, STATE.md wins.
 3. **HANDOFF.md is single most-recent** handoff only.

@@ -69,3 +69,27 @@ run_leak_scan() {
     log_warn "leak-scan.sh not found — skip"
   fi
 }
+
+# Staging/production deploy operator gate (see docs/handbook/06-user-branches-and-deploy-governance.md)
+guard_deploy_operator() {
+  local allowed="${SUPERAPP_DEPLOY_OPERATOR_EMAIL:-${DEPLOY_OPERATOR_EMAIL:-}}"
+  if [[ -z "$allowed" ]]; then
+    log_warn "SUPERAPP_DEPLOY_OPERATOR_EMAIL not set — skipping email gate (set in .env for teams)"
+    return 0
+  fi
+  if [[ "${SUPERAPP_BREAK_GLASS_DEPLOY:-}" == "1" ]]; then
+    log_warn "SUPERAPP_BREAK_GLASS_DEPLOY=1 — operator guard bypassed"
+    return 0
+  fi
+  local current
+  current="$(git config --get user.email 2>/dev/null || true)"
+  if [[ -z "$current" ]]; then
+    log_fail "git user.email not set; cannot authorize deploy"
+    exit 1
+  fi
+  if [[ "${current,,}" != "${allowed,,}" ]]; then
+    log_fail "Deploy restricted to: ${allowed} (current: ${current})"
+    log_info "Push user/<handle>/integrate to GitHub and open a PR instead."
+    exit 1
+  fi
+}

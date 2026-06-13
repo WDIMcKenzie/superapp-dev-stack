@@ -29,8 +29,8 @@ Three tracks. Finish each exit criterion before moving on.
 
 1. Pick **host + database** from [hosting/database-host-pairing.md](hosting/database-host-pairing.md).
 2. Follow `playbooks/hosting/<provider>/README.md` and `playbooks/databases/<provider>.md`.
-3. **[github]** PR workflow: `feature/*` → `develop` → gated `main`.
-4. **[-staging env]** Deploy and verify before **[-prod env]** (human gate).
+3. **[github]** PR workflow: `user/<handle>/workspace` → `develop` → gated `main` (see [handbook §06](handbook/06-user-branches-and-deploy-governance.md)).
+4. **[-staging env]** Deploy operator only, after review; verify before **[-prod env]**.
 
 **Exit:** Staging URL verified; secrets only in provider secret manager.
 
