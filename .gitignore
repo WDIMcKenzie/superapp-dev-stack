@@ -51,5 +51,11 @@ projects/*
 # Local org-specific leak-scan patterns (never commit real hostnames here)
 scripts/leak-scan.patterns
 
+# Private product planning (commercial; belongs in the private product repo, never public)
+docs/plans/
+
+# Deploy-gate audit log (local operator audit trail; never commit)
+scripts/ops/.audit/
+
 # OS
 Thumbs.db
