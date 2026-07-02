@@ -47,10 +47,12 @@ For production apps we typically deploy on **Google Cloud (GCP)**, **AWS**, or
 Pair compute with the database matrix in
 [`docs/hosting/database-host-pairing.md`](docs/hosting/database-host-pairing.md).
 
-## Free consulting from We'll Do It Solutions
+## Built this? Get it running governed
 
-We offer **free tech support and consulting** on development, business systems,
-hosting choices, and getting into our programs:
+Everything above gets you a working starter and the workflow to build on it
+yourself. If you'd rather have it set up, hosted, or governed for you — hosting
+choices, deploy gates, ongoing support — **We'll Do It Solutions** offers **free
+tech support and consulting**, including help getting into our programs:
 
 - **Phone:** [833-WDI-4YOU](tel:+18339344968) (833-934-4968)
 - **Email:** [specialist@welldoit.solutions](mailto:specialist@welldoit.solutions)
