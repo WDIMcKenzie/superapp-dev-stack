@@ -8,5 +8,6 @@
 | Hosting economics | [hosting-economics.md](hosting-economics.md) | Cost, control, compliance |
 | Database pairing | [../databases/00-data-contract.md](../databases/00-data-contract.md) | Adapters, tiers, MCP |
 | Data & analytics (optional) | [data-analytics-appendix.md](data-analytics-appendix.md) | Metrics, product decisions |
+| Deploy governance | [../handbook/06-user-branches-and-deploy-governance.md](../handbook/06-user-branches-and-deploy-governance.md) | User branches, PR flow, deploy-operator gate |
 
-Suggested order: AI-assisted → Full-stack → Database → Hosting → WordPress (if needed).
+Suggested order: AI-assisted → Full-stack → Database → Hosting → WordPress (if needed) → Deploy governance.

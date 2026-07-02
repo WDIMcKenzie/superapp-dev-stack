@@ -16,9 +16,15 @@ Three tracks. Finish each exit criterion before moving on.
 
 ## Track 2 — Build
 
+**Shortcut:** `pnpm run init` runs the whole track below as one interactive wizard
+(tool checks, project folder, database choice, `.env.local`, install, `db:up` +
+`db:validate`). No prior `pnpm install` needed — it's plain Node with zero deps.
+
+Manual steps (what the wizard automates):
+
 1. **[local-tree]** Copy `template/` to your project folder.
 2. **[local-tree]** `pnpm install`
-3. Choose database: [docs/databases/ai-setup-tiers.md](databases/ai-setup-tiers.md) (default: Supabase local).
+3. Choose database: [docs/databases/ai-setup-tiers.md](databases/ai-setup-tiers.md) (default: local Postgres via Docker Compose, no account needed).
 4. **[local-tree]** `cp .env.example .env.local` — fill `DATABASE_*` vars.
 5. **[local-tree]** `pnpm run db:up` → `pnpm run db:validate` → `pnpm dev`
 6. Open web app (default port 4000) and API health (`/api/health`, `/api/health/db`).

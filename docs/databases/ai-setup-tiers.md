@@ -11,7 +11,9 @@ Pick tier intentionally. Agents succeed fastest on Tier S.
 
 ## Default for this curriculum
 
-**Tier S — Supabase local** via `pnpm run db:up`.
+**Local Postgres via Docker Compose** (`DATABASE_PROVIDER=postgres` in `.env.example`) via
+`pnpm run db:up` — no external account, works offline. Switch to **Tier S — Supabase local**
+by uncommenting the Supabase block in `.env.local` when you want hosted parity (Studio UI, MCP).
 
 ## When to move up tiers
 

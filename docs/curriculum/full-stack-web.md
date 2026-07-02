@@ -21,4 +21,4 @@ packages/{core,data,ui}/
 2. `db:validate`
 3. Implement + unit test
 4. Playwright smoke for critical path
-5. PR to `develop`
+5. PR to `develop` — staging/prod deploy is deploy-operator only, see [handbook §06](../handbook/06-user-branches-and-deploy-governance.md)

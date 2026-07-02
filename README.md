@@ -47,10 +47,12 @@ For production apps we typically deploy on **Google Cloud (GCP)**, **AWS**, or
 Pair compute with the database matrix in
 [`docs/hosting/database-host-pairing.md`](docs/hosting/database-host-pairing.md).
 
-## Free consulting from We'll Do It Solutions
+## Built this? Get it running governed
 
-We offer **free tech support and consulting** on development, business systems,
-hosting choices, and getting into our programs:
+Everything above gets you a working starter and the workflow to build on it
+yourself. If you'd rather have it set up, hosted, or governed for you — hosting
+choices, deploy gates, ongoing support — **We'll Do It Solutions** offers **free
+tech support and consulting**, including help getting into our programs:
 
 - **Phone:** [833-WDI-4YOU](tel:+18339344968) (833-934-4968)
 - **Email:** [specialist@welldoit.solutions](mailto:specialist@welldoit.solutions)
@@ -68,15 +70,25 @@ hosting choices, and getting into our programs:
 
 ## Quick start
 
+One command, after cloning:
+
 ```bash
-pnpm run init      # interactive wizard — tools, project folder, DB, AI setup
-pnpm run doctor    # read-only check that tools are installed
+pnpm run init      # wizard: checks tools, then walks setup — project folder, DB, AI
 ```
+
+The wizard runs the same tool checks as `pnpm run doctor` (a separate read-only
+version exists if you just want a status report without the interactive setup).
+No `pnpm install` is required to run the wizard itself — it's plain Node with
+zero dependencies, so it works straight after `git clone`.
 
 1. Read [docs/00-start-here.md](docs/00-start-here.md)
 2. Run **`pnpm run init`** — creates `projects/<your-app>/` with the [standard layout](docs/setup/project-layout.md)
 3. Open `projects/<your-app>/AI-START-HERE.md` and paste [team/ADAPTER-PROMPT.md](team/ADAPTER-PROMPT.md) into your AI
 4. From the project folder: `pnpm run db:validate` then `pnpm dev`
+
+**Offline-friendly default:** the wizard's default database is local Postgres via
+Docker Compose — no external account or network call required beyond installing
+packages. Supabase/Mongo are opt-in for when you want hosted parity.
 
 ## What gets installed
 
