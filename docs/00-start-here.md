@@ -16,6 +16,12 @@ Three tracks. Finish each exit criterion before moving on.
 
 ## Track 2 — Build
 
+**Shortcut:** `pnpm run init` runs the whole track below as one interactive wizard
+(tool checks, project folder, database choice, `.env.local`, install, `db:up` +
+`db:validate`). No prior `pnpm install` needed — it's plain Node with zero deps.
+
+Manual steps (what the wizard automates):
+
 1. **[local-tree]** Copy `template/` to your project folder.
 2. **[local-tree]** `pnpm install`
 3. Choose database: [docs/databases/ai-setup-tiers.md](databases/ai-setup-tiers.md) (default: local Postgres via Docker Compose, no account needed).

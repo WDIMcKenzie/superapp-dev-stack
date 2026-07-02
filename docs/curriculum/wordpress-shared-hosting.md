@@ -15,7 +15,7 @@ Do not expect Node.js + Postgres on basic shared plans.
 2. `[local-tree]` `cp sites/wordpress-site/.env.example sites/wordpress-site/.env`
 3. `[local-tree]` Run push script (see `playbooks/hosting/godaddy/README.md`)
 4. Browser verify `{{STAGING_URL}}`
-5. `[github]` PR `site/{{APP}}-*`
+5. `[github]` PR `site/{{APP}}-*` — staging/prod push is deploy-operator only, see [handbook §06](../handbook/06-user-branches-and-deploy-governance.md)
 
 ## Plugins
 

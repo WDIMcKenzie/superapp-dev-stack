@@ -3,6 +3,7 @@
   "private": true,
   "description": "Public curriculum and setup wizard for AI-assisted full-stack development",
   "scripts": {
+    "start": "node scripts/init/index.mjs",
     "init": "node scripts/init/index.mjs",
     "doctor": "node scripts/init/doctor.mjs",
     "new-app": "node scripts/ops/new-app.mjs",
